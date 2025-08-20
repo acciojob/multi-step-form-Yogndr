@@ -30,6 +30,7 @@ const Step = ({ step, formData, setFormData, nextStep, prevStep, handleSubmit })
             value={formData.last_name}
             onChange={handleChange}
           />
+          <button type="button" onClick={nextStep}>Next</button>
           </>
         )}
         </div>
@@ -52,6 +53,8 @@ const Step = ({ step, formData, setFormData, nextStep, prevStep, handleSubmit })
             value={formData.car_price}
             onChange={handleChange}
           />
+          <button type="button" onClick={prevStep}>Previous</button>
+          <button type="button" onClick={nextStep}>Next</button>
         </>
       )}
       </div>
@@ -73,16 +76,18 @@ const Step = ({ step, formData, setFormData, nextStep, prevStep, handleSubmit })
             value={formData.expiry_date}
             onChange={handleChange}
           />
+          <button type="button" onClick={nextStep}>Next</button>
+          <button type="submit" onClick={handleSubmit}>Submit</button>
         </>
       )}
       </div>
 
 
-      <div>
+      {/* <div>
         {step > 1 && <button type="button" onClick={prevStep}>Previous</button>}
         {step < 3 && <button onClick={nextStep}>Next</button>}
         {step === 3 && <button onClick={handleSubmit}>Submit</button>}
-      </div>
+      </div> */}
 
 
 

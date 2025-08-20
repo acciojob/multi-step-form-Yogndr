@@ -22,7 +22,8 @@ const App = () => {
   const prevStep=()=>{
     setStep(prev => Math.max(prev - 1, 1))
   }
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
     console.log("Final Data:", formData);
     alert("Form submitted successfully!");
   };
