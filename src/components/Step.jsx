@@ -76,7 +76,7 @@ const Step = ({ step, formData, setFormData, nextStep, prevStep, handleSubmit })
             value={formData.expiry_date}
             onChange={handleChange}
           />
-          <button type="button" onClick={nextStep}>Next</button>
+          <button type="button" onClick={prevStep}>Previous</button>
           <button type="submit" onClick={handleSubmit}>Submit</button>
         </>
       )}
