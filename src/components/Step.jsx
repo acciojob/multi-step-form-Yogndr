@@ -5,7 +5,7 @@ const Step = ({ step, formData, setFormData, nextStep, prevStep, handleSubmit })
     setFormData({ ...formData, [e.target.id]: e.target.value });
     };
   return (
-    <div>
+    <form>
 
     {step === 1 && <h2>Customer Details</h2>}
       {step === 2 && <h2>Car Details</h2>}
@@ -86,7 +86,7 @@ const Step = ({ step, formData, setFormData, nextStep, prevStep, handleSubmit })
 
 
 
-    </div>
+    </form>
   )
 }
 
