@@ -12,7 +12,7 @@ const Step = ({ step, formData, setFormData, nextStep, prevStep, handleSubmit })
       {step === 3 && <h2>Payment Details</h2>}
 
      {step === 1 && (
-        <>
+        <div id="step1">
           <label htmlFor="first_name">First Name:</label>
           <input
             id="first_name"
@@ -27,12 +27,12 @@ const Step = ({ step, formData, setFormData, nextStep, prevStep, handleSubmit })
             value={formData.last_name}
             onChange={handleChange}
           />
-        </>
+        </div>
       )}
   
 
       {step === 2 && (
-        <>
+        <div id="step2">
           <label htmlFor="model">Brand:</label>
           <input
             id="model"
@@ -47,11 +47,11 @@ const Step = ({ step, formData, setFormData, nextStep, prevStep, handleSubmit })
             value={formData.car_price}
             onChange={handleChange}
           />
-        </>
+        </div>
       )}
 
       {step === 3 && (
-        <>
+        <div id="step3">
           <label htmlFor="card_info">Credit Card Number:</label>
           <input
             id="card_info"
@@ -66,7 +66,7 @@ const Step = ({ step, formData, setFormData, nextStep, prevStep, handleSubmit })
             value={formData.expiry_date}
             onChange={handleChange}
           />
-        </>
+        </div>
       )}
 
 
