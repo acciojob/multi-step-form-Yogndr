@@ -1,11 +1,34 @@
 
-import React from "react";
+import React, { useState } from "react";
 import './../styles/App.css';
+import Step from "./Step";
 
 const App = () => {
+  const[step,setStep]=useState(1);
+  const[formData,setFormData]=useState({
+    first_name: "",
+    last_name: "",
+    model: "",
+    car_price: "",
+    card_info: "",
+    expiry_date: ""
+
+  })
+
+  const nextStep=()=>{
+    setStep(Math.min(step+1,3))
+  }
+  const prevStep=()=>{
+    setStep(Math.max(step-1,1))
+  }
+  const handleSubmit = () => {
+    console.log("Final Data:", formData);
+    alert("Form submitted successfully!");
+  };
   return (
     <div>
-        {/* Do not remove the main div */}
+      <Step step={step} formData={formData} setFormData={setFormData} nextStep={nextStep} prevStep={prevStep} handleSubmit={handleSubmit} />
+        
     </div>
   )
 }
