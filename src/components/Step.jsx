@@ -74,10 +74,22 @@ const Step = ({ step, formData, setFormData, nextStep, prevStep, handleSubmit })
 
 
       <div>
-        {step > 1 && <button onClick={prevStep}>Previous</button>}
-        {step < 3 && <button onClick={nextStep}>Next</button>}
-        {step === 3 && <button onClick={handleSubmit}>Submit</button>}
-      </div>
+  {step > 1 && (
+    <button type="button" onClick={prevStep}>
+      Previous
+    </button>
+  )}
+  {step < 3 && (
+    <button type="button" onClick={nextStep}>
+      Next
+    </button>
+  )}
+  {step === 3 && (
+    <button type="button" onClick={handleSubmit}>
+      Submit
+    </button>
+  )}
+</div>
 
 
 
