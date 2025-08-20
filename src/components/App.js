@@ -16,10 +16,10 @@ const App = () => {
   })
 
   const nextStep=()=>{
-    setStep(Math.min(step+1,3))
+    setStep(prev => Math.min(prev + 1, 3))
   }
   const prevStep=()=>{
-    setStep(Math.max(step-1,1))
+    setStep(prev => Math.max(prev - 1, 1))
   }
   const handleSubmit = () => {
     console.log("Final Data:", formData);

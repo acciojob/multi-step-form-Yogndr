@@ -15,6 +15,7 @@ const Step = ({ step, formData, setFormData, nextStep, prevStep, handleSubmit })
         <div id="step1">
           <label htmlFor="first_name">First Name:</label>
           <input
+            type="text"
             id="first_name"
             value={formData.first_name}
             onChange={handleChange}
@@ -23,6 +24,7 @@ const Step = ({ step, formData, setFormData, nextStep, prevStep, handleSubmit })
 
           <label htmlFor="last_name">Last Name:</label>
           <input
+            type="text"
             id="last_name"
             value={formData.last_name}
             onChange={handleChange}
@@ -35,6 +37,7 @@ const Step = ({ step, formData, setFormData, nextStep, prevStep, handleSubmit })
         <div id="step2">
           <label htmlFor="model">Brand:</label>
           <input
+            type="text"
             id="model"
             value={formData.model}
             onChange={handleChange}
