@@ -16,6 +16,7 @@ const App = () => {
   })
 
   const nextStep=()=>{
+    console.log("Moving to next step");
     setStep(prev => Math.min(prev + 1, 3))
   }
   const prevStep=()=>{

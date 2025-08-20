@@ -11,8 +11,9 @@ const Step = ({ step, formData, setFormData, nextStep, prevStep, handleSubmit })
       {step === 2 && <h2>Car Details</h2>}
       {step === 3 && <h2>Payment Details</h2>}
 
-     {step === 1 && (
         <div id="step1">
+     {step === 1 && (
+        <>
           <label htmlFor="first_name">First Name:</label>
           <input
             type="text"
@@ -29,12 +30,13 @@ const Step = ({ step, formData, setFormData, nextStep, prevStep, handleSubmit })
             value={formData.last_name}
             onChange={handleChange}
           />
+          </>
+        )}
         </div>
-      )}
   
-
+      <div id="step2">
       {step === 2 && (
-        <div id="step2">
+        <>
           <label htmlFor="model">Brand:</label>
           <input
             type="text"
@@ -50,11 +52,13 @@ const Step = ({ step, formData, setFormData, nextStep, prevStep, handleSubmit })
             value={formData.car_price}
             onChange={handleChange}
           />
-        </div>
+        </>
       )}
-
+      </div>
+       
+       <div id="step3">
       {step === 3 && (
-        <div id="step3">
+        <>
           <label htmlFor="card_info">Credit Card Number:</label>
           <input
             id="card_info"
@@ -69,27 +73,16 @@ const Step = ({ step, formData, setFormData, nextStep, prevStep, handleSubmit })
             value={formData.expiry_date}
             onChange={handleChange}
           />
-        </div>
+        </>
       )}
+      </div>
 
 
       <div>
-  {step > 1 && (
-    <button type="button" onClick={prevStep}>
-      Previous
-    </button>
-  )}
-  {step < 3 && (
-    <button type="button" onClick={nextStep}>
-      Next
-    </button>
-  )}
-  {step === 3 && (
-    <button type="button" onClick={handleSubmit}>
-      Submit
-    </button>
-  )}
-</div>
+        {step > 1 && <button onClick={prevStep}>Previous</button>}
+        {step < 3 && <button onClick={nextStep}>Next</button>}
+        {step === 3 && <button onClick={handleSubmit}>Submit</button>}
+      </div>
 
 
 
